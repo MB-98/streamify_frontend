@@ -1,0 +1,73 @@
+.movie-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  .movie-info {
+    flex: 1 1 0;
+    min-width: 0;
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+  }
+
+  .imagec-container {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      object-fit: cover;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 900px) {
+  .movie-details {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+
+    .imagec-container {
+      justify-content: center;
+      margin-bottom: 1rem;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.video-player {
+  flex: 1;
+
+  .responsive-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+
+    app-streaming {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

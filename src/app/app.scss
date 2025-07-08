@@ -1,0 +1,30 @@
+.streaming-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .site-header {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+
+  
+  }
+}

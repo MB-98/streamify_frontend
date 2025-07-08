@@ -1,0 +1,29 @@
+@if (movie) {
+    <h2>{{ movie.title }}</h2>
+    <section class="video-player">
+    <div class="responsive-player">
+        <app-streaming
+        [options]="{
+            autoplay: false,
+            controls: true,
+            sources: [
+            {
+                src: cloudfrontUrl,
+                type: 'application/x-mpegURL',
+                withCredentials: true
+            }
+            ]
+        }"
+        ></app-streaming>
+        </div>
+    </section>
+    <section class="movie-details">
+        <div class="movie-info">
+             
+             <p>{{ movie.description }}</p>
+        </div>
+    </section>
+   
+} @else {
+    <p>Loading movie details...</p>
+}
