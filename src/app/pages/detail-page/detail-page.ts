@@ -21,10 +21,7 @@ export class DetailPage implements OnInit {
 
   ngOnInit(): void {
     this.movie = this.activatedRoute.snapshot.data['movie'];
-    console.log('Movie ID from route:', this.movie);
     this.cloudfrontUrl = environment.awsCloudfrontUrl + '/' + this.movie.filename + '/' +this.movie.filename+ '.m3u8';
-    console.log('CloudFront URL:', this.cloudfrontUrl);
-    console.log('Movie details loaded:', this.movie);
   }
   
 }

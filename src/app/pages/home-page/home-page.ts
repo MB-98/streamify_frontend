@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
-import { MovieService } from '../../services/movie-service';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Movie } from '../../classes/movie';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home-page',
@@ -18,5 +18,10 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
     this.movies = this.route.snapshot.data['movies'];
     console.log('Movies loaded from resolver:', this.movies);
+  }
+
+  getMovieImage(movie: Movie): string {
+    return environment.awsCloudfrontUrl + '/' + movie.filename + '/' + movie.image;
+      
   }
 }
