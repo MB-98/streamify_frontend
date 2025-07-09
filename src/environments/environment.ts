@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    backendApiUrl: 'http://my-prod-url', // Replace with your production API URL
+    backendApiUrl: 'https://streamify-backend.marcobarden.de', 
     awsCloudfrontUrl: 'https://streamify-cloudfront.marcobarden.de'
 };
