@@ -2,9 +2,14 @@
   <header class="site-header">
     <h1 routerLink="/">Streamify</h1>
   </header>
-
+  
   <div class="main-content">
-    <router-outlet />
+    @if(hasSession){
+      <router-outlet />
+    }
+    @else {
+      <p>Please wait while we set up your streaming session...</p>
+    }
   </div>
 </div>
 
