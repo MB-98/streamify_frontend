@@ -49,8 +49,6 @@ export class Streaming implements OnInit, OnDestroy  {
     });
   }
 
-  
-
   // Dispose the player OnDestroy
   ngOnDestroy() {
     if (this.player) {
